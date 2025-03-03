@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public static class scr_Models
 {
@@ -41,6 +42,14 @@ public static class scr_Models
         [Header("Jumping")]
         public float JumpingHeight;
         public float JumpingFalloff;
+        public float FallingSmoothing;
+
+        [Header("Speed Effectors")]
+        public float SpeedEffector = 1;
+        public float CrouchSpeedEffector;
+        public float ProneSpeedEffector;
+        public float FallingSpeedEffector;
+
 
 
     }
@@ -53,6 +62,22 @@ public static class scr_Models
     }
 
 
+
+    #endregion
+
+    #region - Weapons -
+    [Serializable]
+    public class  WeaponSettingsModel
+    {
+        [Header("Sway")]
+        public float SwayAmount;
+        public bool SwayYInverted;
+        public bool SwayXInverted;
+        public float SwaySmoothing;
+        public float SwayResetSmoothing;
+        public float SwayClampX;
+        public float SwayClampY;
+    }
 
     #endregion
 }
