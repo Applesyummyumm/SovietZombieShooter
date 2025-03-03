@@ -25,7 +25,11 @@ public static class scr_Models
         public bool ViewXInverted;
         public bool ViewYInverted;
 
-        [Header("Movement")]
+        [Header("Movement - Runnig")]
+        public float RunningForwardSpeed;
+        public float RunningStrafeSpeed;
+
+        [Header("Movement - Walking")]
         public float WalkingForwardSpeed;
         public float WalkingBackwardSpeed;
         public float WalkingStrafeSpeed;
@@ -36,5 +40,15 @@ public static class scr_Models
 
 
     }
+
+    [Serializable]
+    public class CharacterStance
+    {
+        public float CameraHeight;
+        public CapsuleCollider StanceCollider;
+    }
+
+
+
     #endregion
 }
